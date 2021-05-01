@@ -34,7 +34,73 @@ paths:
           description: Success
           schema:
             # a pointer to a definition
-            $ref: "#/definitions/questsResponse"
+            $ref: "#/definitions/QuestsResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /genres:
+    x-swagger-router-controller: genres
+    get:
+      description: Returns parametres of Quests
+      # used as the method name of the controller
+      operationId: genres
+      parameters:
+        - name: parametres
+          in: query
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/GenresResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /comments:
+    x-swagger-router-controller: comments
+    get:
+      description: Returns list of comments
+      # used as the method name of the controller
+      operationId: comments
+      parameters:
+        - name: parametres
+          in: query
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/CommentsResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /map:
+    x-swagger-router-controller: map
+    get:
+      description: Returns map paremetres
+      # used as the method name of the controller
+      operationId: map
+      parameters:
+        - name: parametres
+          in: query
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/MapResponse"
         # responses may fall through to errors
         default:
           description: Error
@@ -44,27 +110,86 @@ paths:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
 definitions:
-  questsResponse:
+  MapResponse:
     type: array
     items:
-      $ref: "#/definitions/quests"
-  quests:
-    required: 
-      -id
+      $ref: "#/definitions/Map"
+  Map:
+    required:
+      - id
     properties:
       id:
         type: string
       name:
         type: string
-      genres:
+      genre:
+        type: string
+      coorX:
+        type: integer
+      coorY:
+        type: integer
+  
+  CommentsResponse:
+    type: array
+    items:
+      $ref: "#/definitions/Comments"
+  
+  Comments:
+    required:
+      - id
+    properties:
+      id:
+        type: string
+      name: 
+        type: string
+      comment:
+        type: string
+      date:
+        type: string
+      image:
+        type: string
+
+  GenresResponse:
+    type: array
+    items:
+      $ref: "#/definitions/Genres"
+
+  Genres:
+    required:
+      - id
+    properties:
+      genre:
+        type: string
+      name:
+        type: string
+      image:
+        type: string
+      id:
+        type: string
+      description:
+        type: string
+
+  QuestsResponse:
+    type: array
+    items:
+      $ref: "#/definitions/Quests"
+      
+  Quests:
+    required: 
+      - id
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      genre:
         type: string
       image:
         type: string
       description:
         type: string
+        
   ErrorResponse:
-    required:
-      - id
     properties:
       message:
         type: string
