@@ -4,8 +4,6 @@ var util = require('util');
 var faker = require('faker');
 const { fake } = require('faker');
 
-const dataRes = [];
-
 faker.locale = 'ru';
 
 module.exports = {
@@ -26,6 +24,8 @@ function getComments(req, res) {
 
     return `${day}-${month}-${year}`;
   };
+
+  const dataRes = [];
 
   for (let i = 0; i < Math.floor(Math.random() * 20 + 1); i += 1) {
     dataRes.push(
