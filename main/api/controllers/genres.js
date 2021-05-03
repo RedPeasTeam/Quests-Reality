@@ -25,7 +25,7 @@ var faker = require('faker')
   we specify that in the exports of this module that 'hello' maps to the function named 'hello'
  */
 module.exports = {
-  main: getParematres
+  genres: getParematres
 };
 
 /*
