@@ -115,6 +115,8 @@ definitions:
     items:
       $ref: "#/definitions/Map"
   Map:
+    required:
+      - id
     properties:
       id:
         type: string
@@ -133,10 +135,14 @@ definitions:
       $ref: "#/definitions/Comments"
   
   Comments:
+    required:
+      - id
     properties:
       id:
         type: string
-      name: 
+      firstName: 
+        type: string
+      lastName:
         type: string
       comment:
         type: string
@@ -151,6 +157,8 @@ definitions:
       $ref: "#/definitions/Genres"
 
   Genres:
+    required:
+      - id
     properties:
       genre:
         type: string
@@ -169,6 +177,8 @@ definitions:
       $ref: "#/definitions/Quests"
       
   Quests:
+    required:
+      - id
     properties:
       id:
         type: string
