@@ -1,0 +1,15 @@
+@import "../../../variables";
+
+.home {
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 115px;
+
+    .img-block {
+      flex: 0 0 33.3333%;
+    }
+  }
+}

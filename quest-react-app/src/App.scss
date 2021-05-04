@@ -1,0 +1,26 @@
+@import "normalize";
+@import "variables";
+
+.content-wrapper {
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, $bg_color1, $bg_color0);
+  position: relative;
+
+  .title {
+    padding: 30px 0;
+    text-align: center;
+    color: $txt_color0;
+    @include setFont('sans-serif', 400, 3.125rem, 3rem)
+  }
+}
+
+@import "components/mainPages/genre/index";
+@import "components/mainPages/home/index";
+@import "components/mainPages/questLocation/index";
+@import "components/mainPages/reviews/index";
+@import "components/mainPages/noMatch/index";
+@import "components/mainPages/header/index";
+@import "components/mainPages/footer/index";
+@import "components/helpers/imgBlock/index";
