@@ -1,0 +1,30 @@
+@import "../../../variables";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  min-height: 50px;
+  background-color: $bg_color0;
+  color: $txt_color1;
+  width: 100%;
+  margin-top: auto;
+  .contact-us {
+    display: flex;
+    .invisible-block {
+      opacity: 0;
+      user-select: none;
+      margin-left: 10px;
+      transition: 1s
+    }
+
+    .visible-block {
+      cursor: pointer;
+    }
+
+    .visible-block:hover + .invisible-block {
+      opacity: 1;
+    }
+  }
+}

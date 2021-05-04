@@ -1,0 +1,24 @@
+@import "../../../variables";
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 115px;
+  background-color: $bg_color0;
+
+  .nav-bar {
+    .nav-item {
+      margin: 5px;
+      color: $txt_color0;
+    }
+
+    .nav-active {
+      border-bottom: 1px solid $brdr_color0;
+    }
+  }
+
+  .logo {
+    color: $txt_color1;
+  }
+}

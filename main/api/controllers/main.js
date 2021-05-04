@@ -11,6 +11,16 @@
  */
 var util = require('util');
 var faker = require('faker')
+let arr = []
+for(let i = 0; i <=5; i++) {
+   arr.push({
+      "id": '' + faker.datatype.number(),
+      "name": faker.lorem.word(),
+      "genre": '' + faker.lorem.word(),
+      "image": faker.image.people().slice(0, -10) + Math.ceil(Math.random() * 400) + '/people',
+      "description": faker.lorem.words()
+      })
+}
 /*
  Once you 'require' a module you can reference the things that it exports.  These are defined in module.exports.
  For a controller in a127 (which this is) you should export the functions referenced in your Swagger document by name.
@@ -31,48 +41,5 @@ module.exports = {
  */
 function getParematres(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  res.json([
-   {
-     "id": '' + faker.random.number(),
-     "name": faker.lorem.word(),
-     "genre": '' + faker.lorem.word(),
-     "image": faker.image.city(),
-     "description": faker.lorem.words()
-   },
-   {
-      "id": '' + faker.random.number(),
-      "name": faker.lorem.word(),
-      "genre": '' + faker.lorem.word(),
-      "image": faker.image.city(),
-      "description": faker.lorem.words()
-    },
-    {
-      "id": '' + faker.random.number(),
-      "name": faker.lorem.word(),
-      "genre": '' + faker.lorem.word(),
-      "image": faker.image.city(),
-      "description": faker.lorem.words()
-    },
-    {
-      "id": '' + faker.random.number(),
-      "name": faker.lorem.word(),
-      "genre": '' + faker.lorem.word(),
-      "image": faker.image.city(),
-      "description": faker.lorem.words()
-    },
-    {
-      "id": '' + faker.random.number(),
-      "name": faker.lorem.word(),
-      "genre": '' + faker.lorem.word(),
-      "image": faker.image.city(),
-      "description": faker.lorem.words()
-    },
-    {
-      "id": '' + faker.random.number(),
-      "name": faker.lorem.word(),
-      "genre": '' + faker.lorem.word(),
-      "image": faker.image.city(),
-      "description": faker.lorem.words()
-    }
- ]);
+  res.json([...arr]);
 }
