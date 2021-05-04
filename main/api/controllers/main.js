@@ -15,7 +15,7 @@ let arr = []
 for(let i = 0; i <=5; i++) {
    arr.push({
       "id": '' + faker.datatype.number(),
-      "name": faker.lorem.word(),
+      "name": '' + faker.lorem.word(),
       "genre": '' + faker.lorem.word(),
       "image": faker.image.people().slice(0, -10) + Math.ceil(Math.random() * 400) + '/people',
       "description": faker.lorem.words()

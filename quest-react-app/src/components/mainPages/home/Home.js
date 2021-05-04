@@ -15,16 +15,21 @@ class Home extends Component {
       this.setState({ main: response });
    }
     render() {
-        return <div className='home'>
-            <div className='title'>Recommended</div>
-            <div className='gallery'>
-            {this.state.main.map((element) => <img src={element.image}></img>)}
-                {/*{imgs.map((img, index)=>{
-                    return <img src={testImg} key={index} />
-                })}*/}
-                {/*todo*/}
-            </div>
+       const vlad = this.state.main.map((element) =>  
+         <div className='gallery'>                                  
+            <img src={element.image}></img>
+            <p className='h1'>{element.name}</p>
+            <p>{element.genre}</p>
+            <p>{element.description}</p>
+         </div> 
+          );
+        return(
+         <div className='home'>
+         <div className='title'>Recommended</div>
+         <div className='home__container'>{vlad}</div>
         </div>
+        );
+        
     }
 }
 

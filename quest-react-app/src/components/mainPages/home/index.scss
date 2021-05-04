@@ -1,15 +1,38 @@
 @import "../../../variables";
 
 .home {
-
+   &__container{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
   .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     padding: 0 115px;
-
-    .img-block {
-      flex: 0 0 33.3333%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    padding-bottom: 40px;
+    align-items: center;
+    p{
+       font-size: 25px;
+       color: #fff;
+       margin-top: 20px;
+    }
+    .h1{
+      font-size: 30px;
+      text-transform: uppercase;
+      margin-top: 20px;
+      max-width: 200px;
+      text-align: center;
+      line-height: 130%;
+   }
+    img{
+       margin-top: 30px;
+       display: block;
+       width: 500px;
+       height: 500px;
     }
   }
 }
