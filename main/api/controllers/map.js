@@ -21,7 +21,7 @@ var faker = require('faker')
   we specify that in the exports of this module that 'hello' maps to the function named 'hello'
  */
 module.exports = {
-  main: getParematres
+  map: getParematres
 };
 
 /*
@@ -36,43 +36,61 @@ function getParematres(req, res) {
      "id": '' + faker.random.number(),
      "name": faker.lorem.word(),
      "genre": '' + faker.lorem.word(),
-     "image": faker.image.city(),
-     "description": faker.lorem.words()
-   },
+     "coorX": faker.random.number({
+        "min": 10,
+        "max": 1400
+     }),
+     "coorY": faker.random.number({
+      "min": 10,
+      "max": 1080
+   })},
    {
       "id": '' + faker.random.number(),
       "name": faker.lorem.word(),
       "genre": '' + faker.lorem.word(),
-      "image": faker.image.city(),
-      "description": faker.lorem.words()
-    },
+      "coorX": faker.random.number({
+         "min": 10,
+         "max": 1400
+      }),
+      "coorY": faker.random.number({
+       "min": 10,
+       "max": 1080
+    })},
     {
       "id": '' + faker.random.number(),
       "name": faker.lorem.word(),
       "genre": '' + faker.lorem.word(),
-      "image": faker.image.city(),
-      "description": faker.lorem.words()
-    },
+      "coorX": faker.random.number({
+         "min": 10,
+         "max": 1400
+      }),
+      "coorY": faker.random.number({
+       "min": 10,
+       "max": 1080
+    })},
     {
       "id": '' + faker.random.number(),
       "name": faker.lorem.word(),
       "genre": '' + faker.lorem.word(),
-      "image": faker.image.city(),
-      "description": faker.lorem.words()
-    },
+      "coorX": faker.random.number({
+         "min": 10,
+         "max": 1400
+      }),
+      "coorY": faker.random.number({
+       "min": 10,
+       "max": 1080
+    })},
     {
       "id": '' + faker.random.number(),
       "name": faker.lorem.word(),
       "genre": '' + faker.lorem.word(),
-      "image": faker.image.city(),
-      "description": faker.lorem.words()
-    },
-    {
-      "id": '' + faker.random.number(),
-      "name": faker.lorem.word(),
-      "genre": '' + faker.lorem.word(),
-      "image": faker.image.city(),
-      "description": faker.lorem.words()
-    }
+      "coorX": faker.random.number({
+         "min": 10,
+         "max": 1400
+      }),
+      "coorY": faker.random.number({
+       "min": 10,
+       "max": 1080
+    })}
  ]);
 }
