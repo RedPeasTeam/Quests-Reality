@@ -20,10 +20,14 @@ class Reviews extends Component {
             <div className='reviews-container'>
             {this.state.comments.map(
                 (element) => <div className='reviews-item'>
-                    <img src={element.image}></img>
-                    <h4>{element.firstName} {element.lastName}</h4>
-                    <p>{element.comment}</p>
-                    <p>{element.date}</p>
+                    <div className='flex'>
+                        <img src={element.image} className='reviews-avatar'></img>
+                        <div className='reviews-text'>
+                            <h3 className='reviews-name'>{element.firstName} {element.lastName}</h3>
+                            <p>{element.comment}</p>
+                        </div>
+                    </div>
+                    <p className='reviews-date'>{element.date}</p>
                 </div>)}
             </div>
         </div>

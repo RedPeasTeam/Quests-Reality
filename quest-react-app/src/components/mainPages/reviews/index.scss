@@ -8,9 +8,36 @@
     padding: 0 115px;
 }
 
+.flex {
+    display: flex;
+    margin-bottom: 20px;
+}
+
 .reviews-item {
     background: #ffffff;
     padding: 20px;
     border-radius: 15px;
     margin: 20px 0;
+}
+
+.reviews-text p {
+    text-align: justify;
+}
+
+.reviews-avatar {
+    display: block;
+    margin-right: 20px;
+    height: 100px;
+    width: 100px;
+    border: 5px solid #000000;
+    border-radius: 15px;
+}
+
+.reviews-name {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.reviews-date {
+    text-align: right;
 }
