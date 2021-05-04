@@ -17,13 +17,18 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-yandex-maps": "^4.6.0",
+    "typescript": "^4.1.5",
+    "typescript-fetch-api": "file:gen/api",
+    "typescript-fsa": "^3.0.0",
+    "typescript-fsa-reducers": "^1.2.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "env-cmd -f .env.test react-app-rewired start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "api": "rm -rf gen/api && openapi-generator-cli generate --input-spec ../main/gen/openapi.json --generator-name typescript-fetch --output gen/api --config api.json && cd gen/api && npm install"
   },
   "eslintConfig": {
     "extends": [
