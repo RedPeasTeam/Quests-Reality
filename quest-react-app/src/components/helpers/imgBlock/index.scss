@@ -1,0 +1,14 @@
+@import "../../../variables";
+
+.img-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  align-items: center;
+
+  .quest-name {
+    margin-top: 20px;
+    color: $txt_color0;
+    @include setFont('sans-serif', 400, 2.5rem, 2rem)
+  }
+}

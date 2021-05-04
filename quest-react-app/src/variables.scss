@@ -1,0 +1,19 @@
+
+$black: #000000;
+$white: #FFFFFF;
+$purple: #8764A6;
+
+$txt_color0: $white;
+$txt_color1: $purple;
+
+$bg_color0: $black;
+$bg_color1: $purple;
+
+$brdr_color0: $white;
+
+@mixin setFont($family, $weight, $size, $lineHeight) {
+  font-family: $family, sans-serif;
+  font-size: $size;
+  line-height: $lineHeight;
+  font-weight: $weight;
+}
