@@ -33,62 +33,62 @@ function getParematres(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
   res.json([
    {
-     "id": '' + faker.random.number(),
+     "id": '' + faker.datatype.number(),
      "name": faker.lorem.word(),
      "genre": '' + faker.lorem.word(),
-     "coorX": faker.random.number({
+     "coorX": faker.datatype.number({
         "min": 10,
         "max": 1400
      }),
-     "coorY": faker.random.number({
+     "coorY": faker.datatype.number({
       "min": 10,
       "max": 1080
    })},
    {
-      "id": '' + faker.random.number(),
+      "id": '' + faker.datatype.number(),
       "name": faker.lorem.word(),
       "genre": '' + faker.lorem.word(),
-      "coorX": faker.random.number({
+      "coorX": faker.datatype.number({
          "min": 10,
          "max": 1400
       }),
-      "coorY": faker.random.number({
+      "coorY": faker.datatype.number({
        "min": 10,
        "max": 1080
     })},
     {
-      "id": '' + faker.random.number(),
+      "id": '' + faker.datatype.number(),
       "name": faker.lorem.word(),
       "genre": '' + faker.lorem.word(),
-      "coorX": faker.random.number({
+      "coorX": faker.datatype.number({
          "min": 10,
          "max": 1400
       }),
-      "coorY": faker.random.number({
+      "coorY": faker.datatype.number({
        "min": 10,
        "max": 1080
     })},
     {
-      "id": '' + faker.random.number(),
+      "id": '' + faker.datatype.number(),
       "name": faker.lorem.word(),
       "genre": '' + faker.lorem.word(),
-      "coorX": faker.random.number({
+      "coorX": faker.datatype.number({
          "min": 10,
          "max": 1400
       }),
-      "coorY": faker.random.number({
+      "coorY": faker.datatype.number({
        "min": 10,
        "max": 1080
     })},
     {
-      "id": '' + faker.random.number(),
+      "id": '' + faker.datatype.number(),
       "name": faker.lorem.word(),
       "genre": '' + faker.lorem.word(),
-      "coorX": faker.random.number({
+      "coorX": faker.datatype.number({
          "min": 10,
          "max": 1400
       }),
-      "coorY": faker.random.number({
+      "coorY": faker.datatype.number({
        "min": 10,
        "max": 1080
     })}
