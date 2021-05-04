@@ -1,0 +1,47 @@
+@import "../../../variables";
+
+.genre {
+  display: flex;
+  padding: 0 115px;
+  margin-top: 100px;
+
+  .genre-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    color: $txt_color0;
+    min-width: 160px;
+
+    .genre-title {
+      @include setFont('sans-serif', 400, 2.5rem, 2rem)
+    }
+
+    .genre-list {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+
+      .genre-item {
+        cursor: pointer;
+        @include setFont('IBM Plex Sans', 400, 0.9375rem, 1.25rem);
+        margin: 3px 0;
+        border-bottom: 1px solid transparent;
+      }
+
+      .genre-item:hover {
+        border-bottom: 1px solid $brdr_color0;
+      }
+    }
+  }
+
+  .genre-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 115px;
+
+    .img-block {
+      flex: 0 0 50%;
+    }
+  }
+}
