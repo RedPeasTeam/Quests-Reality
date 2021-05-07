@@ -40,5 +40,19 @@ function getComments(req, res) {
     );
   }
 
+  for (let i = 1; i < dataRes.length; i += 1) {
+    for (let j = 0; j < dataRes.length - i; j += 1) {
+      const time_1_arr = dataRes[j].date.split('-');
+      const time_2_arr = dataRes[j + 1].date.split('-');
+
+      let time1 = +time_1_arr[0] + +time_1_arr[1] * 30 + +time_1_arr[2] * 365;
+      let time2 = +time_2_arr[0] + +time_2_arr[1] * 30 + +time_2_arr[2] * 365;
+
+      if (time1 <= time2) {
+        [dataRes[j], dataRes[j + 1]] = [dataRes[j + 1], dataRes[j]];
+      }
+    }
+  }
+
   res.json([...dataRes]);
 }
